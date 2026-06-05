@@ -1,0 +1,27 @@
+class Solution {
+public:
+    bool isalpha(char ch){
+        if((ch>='0'&& ch<='9') || (tolower(ch)>='a' && tolower(ch)<='z')) {
+            return true;
+            } return false;
+
+    }
+    bool isPalindrome(string s) {
+        int l=0,r=s.length()-1;
+        while(l<r){
+            if(!isalpha(s[l])){
+                l++;
+                continue;
+            }
+            if(!isalpha(s[r])){
+                r--;
+                continue;
+            }
+            if(tolower(s[l])!=tolower(s[r])) return false;
+            l++;
+            r--;
+
+        } return true;
+        
+    }
+};
